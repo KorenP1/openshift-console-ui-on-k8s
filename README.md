@@ -15,7 +15,7 @@ args:
   - -user-auth=disabled
 ```
 
-2\. **OIDC** (Keycloak/Okta/...)
+2\. **OIDC** (Keycloak/Okta/...)  
 The cluster must accept OIDC users within the apiserver or kube-oidc-proxy.    
 To use OIDC authentication method, use these commands and args in the deployment.
 ```
