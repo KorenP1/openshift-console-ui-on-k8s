@@ -11,8 +11,7 @@ If you are choosing to disable the authentication, be aware that everyone that h
 To use disabled authentication method, use these commands and args in the deployment.
 ```
 command: ["/opt/bridge/bin/bridge", "--public-dir=/opt/bridge/static", "-user-settings-location=localstorage"]
-args:
-  - -user-auth=disabled
+args: ["-user-auth=disabled"]
 ```
 
 2\. **OIDC** (Keycloak/Okta/...)  
