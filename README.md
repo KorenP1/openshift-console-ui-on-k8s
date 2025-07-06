@@ -32,3 +32,5 @@ args:
     -user-auth-oidc-client-secret=<CLIENT_SECRET>
     -base-address=<BASE_ADDRESS>
 ```
+
+OIDC cluster authentication was not something i wanted to implement in my cluster, i ended up using disabled authentication and oauth2-proxy instead of basic nginx ingress controller auth
