@@ -16,7 +16,7 @@ args:
 ```
 
 2\. **OIDC** (Keycloak/Okta/...)
-As for OIDC authentication, you must have an OIDC server that serves that oidc standard for example Keycloak or Okta.  
+The cluster must accept OIDC users within the apiserver or kube-oidc-proxy.    
 To use OIDC authentication method, use these commands and args in the deployment.
 ```
 command: ["sh", "-c"]
@@ -25,11 +25,11 @@ args:
     /opt/bridge/bin/bridge
     --public-dir=/opt/bridge/static
     -user-settings-location=localstorage
+    -cookie-authentication-key-file=/tmp/key
+    -cookie-encryption-key-file=/tmp/key
     -user-auth=oidc
     -user-auth-oidc-issuer-url=<ISSUER_URL>
     -user-auth-oidc-client-id=<CLIENT_ID>
     -user-auth-oidc-client-secret=<CLIENT_SECRET>
     -base-address=<BASE_ADDRESS>
-    -cookie-authentication-key-file=/tmp/key
-    -cookie-encryption-key-file=/tmp/key
 ```
